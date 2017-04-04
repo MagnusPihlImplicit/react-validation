@@ -1,5 +1,5 @@
 {
-  "name": "react-validation",
+  "name": "@achingbrain/react-validation",
   "version": "2.10.9",
   "description": "validation components",
   "keywords": [
@@ -15,7 +15,7 @@
     "build": "webpack --config ./webpack/webpack.config.build && webpack --config ./webpack/webpack.config.minify",
     "gh-pages": "webpack --config ./webpack/webpack.config.gh-pages"
   },
-  "main": "lib/build/validation.js",
+  "main": "lib/build/validation.rc.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Lesha-spr/react-validation.git"
