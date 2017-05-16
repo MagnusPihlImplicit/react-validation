@@ -3,7 +3,7 @@ import selectFactory from './../../factories/selectFactory';
 
 class Select extends Component {
     render() {
-        const { containerClassName, hint, ...rest } = this.props;
+        const { containerClassName, hint, help, helpClassName, ...rest } = this.props;
 
         return (
             <div className={containerClassName}>
@@ -16,6 +16,7 @@ class Select extends Component {
                 >
                     {this.props.children}
                 </select>
+                {!hint && help && <div className={helpClassName}>{help}</div>}
                 {hint}
             </div>
         );

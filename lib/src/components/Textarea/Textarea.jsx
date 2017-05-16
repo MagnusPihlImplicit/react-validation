@@ -3,7 +3,7 @@ import textareaFactory from './../../factories/textareaFactory';
 
 class Textarea extends Component {
     render() {
-        const { containerClassName, hint, ...rest } = this.props;
+        const { containerClassName, hint, help, helpClassName, ...rest } = this.props;
 
         return (
             <div className={containerClassName}>
@@ -14,6 +14,7 @@ class Textarea extends Component {
                   onBlur={this.props.onBlur}
                   value={this.props.value}
                 />
+                {!hint && help && <div className={helpClassName}>{help}</div>}
                 {hint}
             </div>
         );

@@ -10,7 +10,9 @@ export default function textareaFactory(WrappedComponent) {
             validations: PropTypes.arrayOf(PropTypes.string).isRequired,
             errorClassName: PropTypes.string,
             containerClassName: PropTypes.string,
-            errorContainerClassName: PropTypes.string
+            errorContainerClassName: PropTypes.string,
+            help: PropTypes.object,
+            helpClassName: PropTypes.string
         };
 
         static contextTypes = {
@@ -46,6 +48,8 @@ export default function textareaFactory(WrappedComponent) {
                 value,
                 onChange,
                 onBlur,
+                help,
+                helpClassName,
                 ...rest } = this.props;
             // TODO: Refactor conditions
             const isInvalid = this.state.isUsed &&
@@ -70,6 +74,8 @@ export default function textareaFactory(WrappedComponent) {
                 onChange: this.onChange,
                 onBlur: this.onBlur,
                 value: this.state.value,
+                help: help,
+                helpClassName: helpClassName,
                 hint,
                 ...rest
             };

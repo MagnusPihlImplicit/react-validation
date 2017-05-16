@@ -10,7 +10,9 @@ export default function inputFactory(WrappedComponent) {
             validations: PropTypes.arrayOf(PropTypes.string).isRequired,
             errorClassName: PropTypes.string,
             containerClassName: PropTypes.string,
-            errorContainerClassName: PropTypes.string
+            errorContainerClassName: PropTypes.string,
+            help: PropTypes.object,
+            helpClassName: PropTypes.string
         };
 
         static contextTypes = {
@@ -51,6 +53,8 @@ export default function inputFactory(WrappedComponent) {
                 value,
                 onChange,
                 onBlur,
+                help,
+                helpClassName,
                 ...rest } = this.props;
             // TODO: Refactor conditions
             const isInvalid = this.state.isUsed
@@ -78,6 +82,8 @@ export default function inputFactory(WrappedComponent) {
                 onBlur: this.onBlur,
                 type: this.props.type || 'text',
                 value: changedValue,
+                help: help,
+                helpClassName: helpClassName,
                 hint,
                 ...rest
             };
