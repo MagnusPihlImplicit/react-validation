@@ -60,7 +60,7 @@ export default function textareaFactory(WrappedComponent) {
             let hint = null;
 
             if (isInvalid) {
-                hint = typeof error === 'function' ? error(this.state.value, this.context.components) : rules[error].hint(this.state.value, this.context.components);
+                hint = typeof error === 'function' ? error(this.state.value, this.context.components) : rules[error].hint(this.state.value, this.context.components, this);
             }
 
             const wrappedProps = {

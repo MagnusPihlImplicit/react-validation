@@ -66,7 +66,7 @@ export default function inputFactory(WrappedComponent) {
             let hint = null;
 
             if (isInvalid) {
-                hint = typeof error === 'function' ? error(changedValue, this.context.components) : rules[error].hint(changedValue, this.context.components);
+                hint = typeof error === 'function' ? error(changedValue, this.context.components) : rules[error].hint(changedValue, this.context.components, this);
             }
 
             const wrappedProps = {
