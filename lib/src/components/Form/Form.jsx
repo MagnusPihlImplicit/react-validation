@@ -5,15 +5,15 @@ import rules from './../../rules';
 
 export default class Form extends Component {
     static propTypes = {
-        children: PropTypes.node
+        // children: PropTypes.node
     };
 
     static childContextTypes = {
-        register: PropTypes.func.isRequired,
-        unregister: PropTypes.func.isRequired,
-        validateState: PropTypes.func.isRequired,
-        components: PropTypes.objectOf(PropTypes.instanceOf(Base)),
-        errors: PropTypes.objectOf(PropTypes.array)
+        // register: PropTypes.func.isRequired,
+        // unregister: PropTypes.func.isRequired,
+        // validateState: PropTypes.func.isRequired,
+        // components: PropTypes.objectOf(PropTypes.instanceOf(Base)),
+        // errors: PropTypes.objectOf(PropTypes.array)
     };
 
     constructor(props) {

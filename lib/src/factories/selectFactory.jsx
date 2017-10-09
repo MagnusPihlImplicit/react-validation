@@ -8,25 +8,25 @@ import Base from './../components/Base/Base';
 export default function selectFactory(WrappedComponent) {
     class CustomSelect extends Base {
         static propTypes = {
-            validations: PropTypes.arrayOf(PropTypes.string).isRequired,
-            errorClassName: PropTypes.string,
-            containerClassName: PropTypes.string,
-            errorContainerClassName: PropTypes.string,
-            help: PropTypes.object,
-            helpClassName: PropTypes.string
+            // validations: PropTypes.arrayOf(PropTypes.string).isRequired,
+            // errorClassName: PropTypes.string,
+            // containerClassName: PropTypes.string,
+            // errorContainerClassName: PropTypes.string,
+            // help: PropTypes.object,
+            // helpClassName: PropTypes.string
         };
 
         static contextTypes = {
-            register: PropTypes.func.isRequired,
-            unregister: PropTypes.func.isRequired,
-            validateState: PropTypes.func.isRequired,
-            components: PropTypes.objectOf(PropTypes.any),
-            errors: PropTypes.objectOf(PropTypes.arrayOf(
-                PropTypes.oneOfType([
-                    PropTypes.string,
-                    PropTypes.node
-                ])
-            ))
+            // register: PropTypes.func.isRequired,
+            // unregister: PropTypes.func.isRequired,
+            // validateState: PropTypes.func.isRequired,
+            // components: PropTypes.objectOf(PropTypes.any),
+            // errors: PropTypes.objectOf(PropTypes.arrayOf(
+            //     PropTypes.oneOfType([
+            //         PropTypes.string,
+            //         PropTypes.node
+            //     ])
+            // ))
         };
 
         constructor(props, context) {
