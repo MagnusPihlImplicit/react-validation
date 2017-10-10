@@ -4,13 +4,13 @@ import cx from 'classnames';
 
 export default class Button extends Component {
     static propTypes = {
-        // children: PropTypes.node,
-        // errorClassName: PropTypes.string,
-        // className: PropTypes.string
+        children: PropTypes.node,
+        errorClassName: PropTypes.string,
+        className: PropTypes.string
     };
 
     static contextTypes = {
-        // errors: PropTypes.objectOf(PropTypes.array)
+        errors: PropTypes.objectOf(PropTypes.array)
     };
 
     render() {

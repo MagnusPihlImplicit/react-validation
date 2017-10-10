@@ -4,18 +4,18 @@ import noop from './../../utils/noop';
 
 class Base extends Component {
     static propTypes = {
-        // value: PropTypes.string.isRequired,
-        // name: PropTypes.string.isRequired,
-        // onChange: PropTypes.func,
-        // onBlur: PropTypes.func
+        value: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        onChange: PropTypes.func,
+        onBlur: PropTypes.func
     };
 
     static contextTypes = {
-        // register: PropTypes.func.isRequired,
-        // unregister: PropTypes.func.isRequired,
-        // validateState: PropTypes.func.isRequired,
-        // components: PropTypes.objectOf(PropTypes.any),
-        // errors: PropTypes.objectOf(PropTypes.array)
+        register: PropTypes.func.isRequired,
+        unregister: PropTypes.func.isRequired,
+        validateState: PropTypes.func.isRequired,
+        components: PropTypes.objectOf(PropTypes.any),
+        errors: PropTypes.objectOf(PropTypes.array)
     };
 
     componentWillReceiveProps(nextProps) {
