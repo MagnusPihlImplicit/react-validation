@@ -17,6 +17,11 @@ class Base extends Component {
         components: PropTypes.objectOf(PropTypes.any),
         errors: PropTypes.objectOf(PropTypes.array)
     };
+    
+    componentDidMount() {
+        this.onBlur = this.onBlur.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
@@ -33,7 +38,7 @@ class Base extends Component {
         this.context.unregister(this);
     }
 
-    onChange = (event) => {
+    onChange(event) {
         // TODO: Refactor conditions
         const isChecked = this.state.isCheckbox ? !this.state.isChecked : true;
         const checkboxValue = isChecked ? event.target.value : '';
@@ -52,7 +57,8 @@ class Base extends Component {
         });
     };
 
-    onBlur = (event) => {
+    onBlur(event) {
+        
         event.persist();
 
         this.setState({
