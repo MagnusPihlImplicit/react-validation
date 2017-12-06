@@ -40,9 +40,11 @@ export default function inputFactory(WrappedComponent) {
             };
 
             context.register(this);
+
         }
 
         render() {
+
             const {
                 /* eslint-disable */
                 validations,
@@ -57,18 +59,19 @@ export default function inputFactory(WrappedComponent) {
                 help,
                 helpClassName,
                 ...rest } = this.props;
-            // TODO: Refactor conditions
-            const isInvalid = this.state.isUsed
+                // TODO: Refactor conditions
+                const isInvalid = this.state.isUsed
                 && this.state.isChanged
                 && !!this.context.errors[this.props.name];
-            const changedValue = this.state.isCheckbox ? this.props.value : this.state.value;
-            const error = isInvalid && this.context.errors[this.props.name][0];
-            let hint = null;
-
-            if (isInvalid) {
-                hint = typeof error === 'function' ? error(changedValue, this.context.components) : rules[error].hint(changedValue, this.context.components, this);
-            }
-
+                const changedValue = this.state.isCheckbox ? this.props.value : this.state.value;
+                const error = isInvalid && this.context.errors[this.props.name][0];
+                let hint = null;
+                
+                if (isInvalid) {
+                    hint = typeof error === 'function' ? error(changedValue, this.context.components) : rules[error].hint(changedValue, this.context.components, this);
+                }
+                
+                
             const wrappedProps = {
                 containerClassName: cx({
                     [containerClassName]: !!containerClassName,
